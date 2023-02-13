@@ -1,29 +1,29 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom"
 
-const layout = () => {
+
+function Layout() {
     return (
         <>
             <nav>
                 <ul>
-                    <li>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link to='/contact'>Contact</Link>
-                    </li>
-                    <li>
-                        <Link to='/galary'>Galary</Link>
-                    </li>
+                    <li><NavLink to='/'>Home</NavLink> </li>
+                    <li><NavLink to='/about'>About</NavLink></li>
+                    <li><NavLink to='/contact'>Contact</NavLink></li>
+                    <li><NavLink to='/gallary'>Gallary</NavLink></li>
+                    <li><NavLink to='/student'>Student</NavLink></li>
+                    <li><NavLink to='/userlist'>User</NavLink></li>
                 </ul>
             </nav>
-            <Outlet />
+            <div>
+                <Outlet />
+            </div>
         </>
-    )
 
+    )
 }
 
-export default layout;
+
+
+
+export default Layout;
